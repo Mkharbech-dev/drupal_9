@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Implementation de notre hook.
+ */
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function module_salah_theme ($existing, $type, $theme, $path) {
+  return [
+    'cars_liste' => [
+      'variables' => ['items' => [], 'title' => '']
+    ]
+  ];
+}
+
+/**
+ * Implements hook_form_alter
+ */
+function module_salah_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id == 'node_article_form') {
+    //Désactiver le champ de l'étiquette.
+    //$form['field_tags']['#access'] = FALSE;
+    //Modifier le label du champ titre
+    //$form['title']['widget'][0]['value']['#title'] = t('Article title');
+    //kint($form); die();
+    //Pérsonnaliser la validation du form par une methode décalrée en dessous
+    $form['#validate'][] = '_module_salah_article_validate';
+  }
+
+}
+
+/**
+ * Our custom validation function.
+ */
+function _module_salah_article_validate(&$form, $form_state) {
+  //kint(($form_state->getValue('title')[0]['value']));die();
+  if (is_numeric($form_state->getValue('title')[0]['value'])) {
+    $form_state->setErrorByName('title', t('le titre doit etre une chaine de caractére svp!'));
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function module_salah_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  $entity->set('title', $entity->get('title')->getValue()[0]['value'] . ' ...');
+}
+

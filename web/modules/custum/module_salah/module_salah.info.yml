@@ -1,0 +1,6 @@
+name: "Module salah"
+description: "premiere module de salah en drupal9"
+type: module
+core_version_requirement: ^9 || ^10
+
+

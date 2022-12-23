@@ -1,0 +1,4 @@
+services:
+  module_salah.hero_articles:
+    class: Drupal\module_salah\HeroArticleService
+

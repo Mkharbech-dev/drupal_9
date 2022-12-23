@@ -1,0 +1,31 @@
+module_salah.listevoitures:
+  path: '/listevoitures'
+  defaults:
+    _controller: '\Drupal\module_salah\Controller\salahController::carsList'
+    _title: 'les meilleurs marques de voitures'
+  requirements:
+    _permission: 'access content'
+
+module_salah.heroform:
+  path: '/hero-form'
+  defaults:
+    _form: '\Drupal\module_salah\Form\HeroForm'
+    _title: 'Qui va gagner'
+  requirements:
+    _permission: 'access content'
+
+module_salah.exampleform:
+  path: '/example-form'
+  defaults:
+    _form: '\Drupal\module_salah\Form\ExampleForm'
+    _title: 'Présenter quelques éléments'
+  requirements:
+    _permission: 'access content'
+
+module_salah.ajaxheroform:
+  path: '/ajax-form'
+  defaults:
+    _form: '\Drupal\module_salah\Form\AjaxHeroForm'
+    _title: 'Ajax hero form battle'
+  requirements:
+    _permission: 'access content'
