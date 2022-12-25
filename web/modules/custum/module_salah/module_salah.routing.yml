@@ -37,3 +37,11 @@ module_salah.salahformajax:
     _title: 'Salah form Ajax'
   requirements:
     _permission: 'access content'
+
+module_salah.confighero:
+  path: '/admin/hero'
+  defaults:
+    _form: '\Drupal\module_salah\Form\HeroConfigForm'
+    _title: 'Notre gonfiguration admin'
+  requirements:
+    _permission: 'administer site configuration'
