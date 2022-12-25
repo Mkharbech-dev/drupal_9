@@ -29,3 +29,11 @@ module_salah.ajaxheroform:
     _title: 'Ajax hero form battle'
   requirements:
     _permission: 'access content'
+
+module_salah.salahformajax:
+  path: '/salah-form'
+  defaults:
+    _form: '\Drupal\module_salah\Form\SalahFormAjax'
+    _title: 'Salah form Ajax'
+  requirements:
+    _permission: 'access content'

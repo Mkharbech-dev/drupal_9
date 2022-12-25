@@ -26,7 +26,7 @@ class salahController extends ControllerBase{
     return [
       '#theme' => 'cars_liste',
       '#items'=> $cars,
-      '#title' => $this->t('notre meilleurs marques de voitures')
+      '#title' => $this->t('Nos meilleures marques de voitures')
     ];
   }
 }
