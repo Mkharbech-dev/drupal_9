@@ -71,7 +71,7 @@ class SalahFormAjax extends FormBase
 
     return $form;
   }
-q
+
   /**
    * An Ajax callback.
    */
