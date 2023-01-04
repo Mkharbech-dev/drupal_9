@@ -28,42 +28,42 @@ class SalahFormAjax extends FormBase
    */
   public function buildForm(array $form, FormStateInterface $form_state)
   {
-    // Create a select field that will update the contents
-    // of the textbox below.
+    // Créer un champ de sélection qui mettra à jour le contenu de la zone de texte ci-dessous.
     $form['example_select'] = [
       '#type' => 'select',
       '#title' => $this->t('Select element'),
       '#options' => [
+        '0' => $this->t(''),
         '1' => $this->t('Salah'),
         '2' => $this->t('Malak'),
         '3' => $this->t('Imane'),
       ],
       '#ajax' => [
-        'callback' => '::myAjaxCallback', // don't forget :: when calling a class method.
-        //'callback' => [$this, 'myAjaxCallback'], //alternative notation
-        'disable-refocus' => FALSE, // Or TRUE to prevent re-focusing on the triggering element.
+        'callback' => '::myAjaxCallback', // n'oubliez pas :: lors de l'appel d'une méthode de classe.
+        //'callback' => [$this, 'myAjaxCallback'], // notation alternative
+        'disable-refocus' => FALSE, // Ou TRUE pour empêcher le recentrage sur l'élément déclencheur.
         'event' => 'change',
-        'wrapper' => 'edit-output', // This element is updated with this AJAX callback.
+        'wrapper' => 'edit-output', // Cet élément est mis à jour avec ce rappel AJAX.
         'progress' => [
           'type' => 'throbber',
-          'message' => $this->t('Verifying entry...'),
+          'message' => $this->t('Vérification de l\'entrée...'),
         ],
       ]
 
     ];
 
-    // Create a textbox that will be updated
-    // when the user selects an item from the select box above.
+    // Créer une zone de texte qui sera mise à jour lorsque l'utilisateur sélectionne un élément
+    // dans la zone de sélection ci-dessus.
     $form['output'] = [
       '#type' => 'textfield',
-      '#size' => '60',
+      '#size' => '80',
       '#disabled' => TRUE,
-      '#value' => 'Hello, Drupal!!1',
+      '#value' => 'Ici on affiche votre selection',
       '#prefix' => '<div id="edit-output">',
       '#suffix' => '</div>',
     ];
 
-    // Create the submit button.
+    // Créer un bouton de soumission.
     $form['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
@@ -76,16 +76,16 @@ class SalahFormAjax extends FormBase
    * An Ajax callback.
    */
   public function myAjaxCallback(array &$form, FormStateInterface $form_state) {
-    // Try to get the selected text from the select element on our form.
-    $selectedText = 'nothing selected';
+    // Essayez d'obtenir le texte sélectionné à partir de l'élément select de notre formulaire.
+    $selectedText = '';
     if ($selectedValue = $form_state->getValue('example_select')) {
-      // Get the text of the selected option.
+      // Obtenir le texte de l'option sélectionnée.
       $selectedText = $form['example_select']['#options'][$selectedValue];
     }
 
-    // Create a new textfield element containing the selected text.
-    // We're replacing the original textfield using an AJAX replace command which
-    // expects either a render array or plain HTML markup.
+    // Crée un nouvel élément textfield contenant le texte sélectionné.
+    // Nous remplaçons le champ de texte d'origine à l'aide d'une commande de remplacement AJAX qui
+    // attend soit un tableau de rendu, soit un balisage HTML simple.
     $elem = [
       '#type' => 'textfield',
       '#size' => '60',
@@ -96,23 +96,23 @@ class SalahFormAjax extends FormBase
       ],
     ];
 
-    // Attach the javascript library for the dialog box command
-    // in the same way you would attach your custom JS scripts.
+    // Attachez la bibliothèque javascript pour la commande de la boîte de dialogue
+    // de la même manière que vous joindrez vos scripts JS personnalisés.
     $dialogText['#attached']['library'][] = 'core/drupal.dialog.ajax';
     // Prepare the text for our dialogbox.
     $dialogText['#markup'] = "You selected: $selectedText";
 
-    // If we want to execute AJAX commands our callback needs to return
-    // an AjaxResponse object. let's create it and add our commands.
+    // Si nous voulons exécuter des commandes AJAX, notre rappel doit renvoyer
+    // un objet AjaxResponse. créons-le et ajoutons nos commandes.
     $response = new AjaxResponse();
-    // Issue a command that replaces the element #edit-output
-    // with the rendered markup of the field created above.
-    // ReplaceCommand() will take care of rendering our text field into HTML.
+    // Émettez une commande qui remplace l'élément #edit-output
+    // avec le balisage rendu du champ créé ci-dessus.
+    // ReplaceCommand() se chargera de rendre notre champ de texte en HTML.
     $response->addCommand(new ReplaceCommand('#edit-output', $elem));
-    // Show the dialog box.
-    //$response->addCommand(new OpenModalDialogCommand('My title', $dialogText, ['width' => '300']));
+    // Afficher le modal de réponse
+    $response->addCommand(new OpenModalDialogCommand('My title', $dialogText, ['width' => '300']));
 
-    // Finally return the AjaxResponse object.
+    // Renvoyez enfin l'objet AjaxResponse.
     return $response;
   }
 

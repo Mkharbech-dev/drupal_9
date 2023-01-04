@@ -43,7 +43,7 @@ class AjaxHeroForm extends FormBase {
       '#type' => 'button',
       '#value' => $this->t('Lancer le jeu'),
       '#ajax' => [
-        'callback' => '::setMessage',
+        'callback' => '::setMessage', // Appel de la méthode setMessage().
       ]
     ];
 

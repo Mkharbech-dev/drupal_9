@@ -72,13 +72,32 @@ class ExampleForm extends FormBase {
       ),
     );
 
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => $this->t('Valider'),
+    );
+
     return $form;
   }
 
   /**
    * {@inheritdoc}
    */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    $msg_value = $form_state->getValue('text');
+
+    if (!str_contains($msg_value, 'Drupal')){
+      $form_state->setErrorByName('text', 'Le texte doit contenir le mot Drupal svp ...');
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->messenger()->addStatus($this->t('Envoi de notre formulaire...'));
+    // Display result.
+    foreach ($form_state->getValues() as $key => $value) {
+      \Drupal::messenger()->addStatus($key . ': ' . $value);
+    }
   }
 }

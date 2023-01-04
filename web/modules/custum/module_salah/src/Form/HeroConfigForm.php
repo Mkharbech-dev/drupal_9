@@ -37,7 +37,7 @@ class HeroConfigForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'module_hero.settings',
+      'module_salah.settings',
     ];
   }
 

@@ -1,4 +1,4 @@
-module_salah.listevoitures:
+module_salah.carsList:
   path: '/listevoitures'
   defaults:
     _controller: '\Drupal\module_salah\Controller\salahController::carsList'
@@ -38,10 +38,11 @@ module_salah.salahformajax:
   requirements:
     _permission: 'access content'
 
-module_salah.confighero:
-  path: '/admin/hero'
+
+module_salah.requests:
+  path: '/requetes-contenu'
   defaults:
-    _form: '\Drupal\module_salah\Form\HeroConfigForm'
-    _title: 'Notre gonfiguration admin'
+    _controller: '\Drupal\module_salah\Controller\salahController::requests'
+    _title: 'Requetes sur les contenus'
   requirements:
-    _permission: 'administer site configuration'
+    _permission: 'access content'
