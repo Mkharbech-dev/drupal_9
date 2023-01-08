@@ -46,4 +46,16 @@ function _module_salah_article_validate(&$form, $form_state) {
 }
 
 
+/**
+ * Implements hook_entity_presave().
+ */
+function module_salah_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if($entity->bundle() == 'article'){
+    Drupal::messenger()->addMessage('nous avons enregistré notre article sous le nom '.$entity
+        ->get('title')->getValue()[0]['value'] . ' ...');
+  }
+
+  $entity->set('title', $entity->get('title')->getValue()[0]['value'] . ' ...');
+}
+
 

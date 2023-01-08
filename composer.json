@@ -24,6 +24,7 @@
         "drupal/paragraphs": "^1.15",
         "drupal/social_media_links": "^2.9",
         "drupal/twig_tweak": "^3.2",
+        "drupal/webprofiler": "^9.0",
         "drush/drush": "^11.4"
     },
     "conflict": {
