@@ -1,0 +1,8 @@
+uuid: 1711ccfa-e430-4ddb-95de-5176fc78a236
+langcode: fr
+status: true
+dependencies: {  }
+name: Catégories
+vid: categories
+description: 'Catégories et Rapports'
+weight: 0

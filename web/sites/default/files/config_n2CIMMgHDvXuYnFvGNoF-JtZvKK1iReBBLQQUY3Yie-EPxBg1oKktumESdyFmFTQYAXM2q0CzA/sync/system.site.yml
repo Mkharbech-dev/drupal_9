@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: fr
+uuid: 67c3a55b-9a0a-430d-9ffd-3f6af27bbdb9
+name: Gestion-Banque
+mail: salah_ita@yahoo.fr
+slogan: 'une banque en ligne moins chére'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: fr
