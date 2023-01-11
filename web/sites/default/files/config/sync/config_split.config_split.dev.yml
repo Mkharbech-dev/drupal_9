@@ -1,0 +1,16 @@
+uuid: 8c66fc4c-a2c6-4f33-adba-da464d61532a
+langcode: fr
+status: false
+dependencies: {  }
+id: dev
+label: Développement
+description: 'Envirennement de développement'
+weight: 0
+folder: ../config/dev
+module:
+  devel: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

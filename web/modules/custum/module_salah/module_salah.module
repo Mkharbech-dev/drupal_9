@@ -55,7 +55,7 @@ function module_salah_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
         ->get('title')->getValue()[0]['value'] . ' ...');
   }
 
-  $entity->set('title', $entity->get('title')->getValue()[0]['value'] . ' ...');
+  //$entity->set('title', $entity->get('title')->getValue()[0]['value'] . ' ...');
 }
 
 
