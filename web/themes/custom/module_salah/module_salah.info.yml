@@ -1,0 +1,9 @@
+name: salah_panache
+type: theme
+base theme: panache
+version: "9.x-1.0"
+core: "8.x"
+core_version_requirement: ^8 || ^9
+package: module_salah
+description: "theme crée pour le module de salah"
+screenshot: logo.png

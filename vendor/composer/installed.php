@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '3f8bb3afa5e9315eaf073419cc6cf5972021f8e1',
+        'reference' => 'e2f49a64b5021e9813406e35887746d0a176fa07',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -457,6 +457,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/panache' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => '8.x-1.1',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../web/themes/contrib/panache',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/paragraphs' => array(
             'pretty_version' => '1.15.0',
             'version' => '1.15.0.0',
@@ -469,7 +478,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '3f8bb3afa5e9315eaf073419cc6cf5972021f8e1',
+            'reference' => 'e2f49a64b5021e9813406e35887746d0a176fa07',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
