@@ -41,11 +41,11 @@ class MigrateColorTest extends MigrateDrupal7TestBase {
     // Test Bartik migration.
     $config = $this->config('color.theme.bartik');
     $files = [
-      'public://color/bartik-e0e23ad7/logo.png',
+      'public://color/bartik-e0e23ad7/screenshot.png',
       'public://color/bartik-e0e23ad7/colors.css',
     ];
     $this->assertSame($files, $config->get('files'));
-    $this->assertSame('public://color/bartik-e0e23ad7/logo.png', $config->get('logo'));
+    $this->assertSame('public://color/bartik-e0e23ad7/screenshot.png', $config->get('logo'));
     $palette = [
       'top' => '#d0d0d0',
       'bottom' => '#c2c4c5',

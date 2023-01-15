@@ -6,5 +6,5 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://logo.png'
+  path: 'public://screenshot.png'
   use_default: false

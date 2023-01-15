@@ -1,9 +1,9 @@
-name: salah_panache
+name: formation
 type: theme
-base theme: panache
+base theme: bartik
 version: "9.x-1.0"
 core: "8.x"
 core_version_requirement: ^8 || ^9
-package: module_salah
+package: formation
 description: "theme crée pour le module de salah"
 screenshot: screenshot.png
