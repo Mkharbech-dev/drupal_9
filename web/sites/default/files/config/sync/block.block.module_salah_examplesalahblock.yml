@@ -1,20 +1,20 @@
-uuid: 83461453-843f-4106-97a2-c2b96e99d997
+uuid: 5ab7ef97-8103-4e08-8a30-a9702fa5f588
 langcode: fr
 status: true
 dependencies:
   module:
     - module_salah
   theme:
-    - bartik
-id: examplesalahblock
-theme: bartik
+    - module_salah
+id: module_salah_examplesalahblock
+theme: module_salah
 region: content
 weight: -2
 provider: null
 plugin: module_salah_salah
 settings:
   id: module_salah_salah
-  label: 'Example d''un block de héro'
+  label: 'Example Héro block'
   label_display: visible
   provider: module_salah
 visibility: {  }

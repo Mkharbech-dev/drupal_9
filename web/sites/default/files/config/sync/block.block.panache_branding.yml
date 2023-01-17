@@ -1,0 +1,25 @@
+uuid: f93409cc-158a-431e-91f6-6d6059358ea2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - panache
+_core:
+  default_config_hash: v0gjBP-lltzHjjshNPTgfBPiHXM1bY0JqXY0lKFxSxU
+id: panache_branding
+theme: panache
+region: header_center
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

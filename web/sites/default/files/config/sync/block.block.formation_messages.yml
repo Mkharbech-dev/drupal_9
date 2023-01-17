@@ -1,0 +1,22 @@
+uuid: 5e0d26e2-82d9-4196-863b-6f3f25ff0baa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - formation
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: formation_messages
+theme: formation
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

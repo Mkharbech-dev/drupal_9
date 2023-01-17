@@ -1,0 +1,22 @@
+uuid: c4cc3af6-ba9b-4d8d-93f0-a304c2617c46
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - panache
+_core:
+  default_config_hash: MpbbDu4ozBHejSG82MXhovqyGHLVNMgPPuT_E_Ffdsk
+id: tabs_2
+theme: panache
+region: content
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

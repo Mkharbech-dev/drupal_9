@@ -1,0 +1,20 @@
+uuid: 24fb6514-1830-4109-909d-9bc1f1145ff0
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - panache
+_core:
+  default_config_hash: mukBr5wPmi6W8VejqZddAKxlR_1RdZLcDoG0USVyQiE
+id: panache_page_title
+theme: panache
+region: page_title
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

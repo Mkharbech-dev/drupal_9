@@ -1,0 +1,22 @@
+uuid: 2100009b-c30f-49d8-9d19-a99967eeed11
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - module_salah
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: module_salah_content
+theme: module_salah
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

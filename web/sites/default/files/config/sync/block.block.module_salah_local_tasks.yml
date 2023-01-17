@@ -1,0 +1,22 @@
+uuid: 96fac7ec-d35d-43a7-9098-196f0d3ad03b
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - module_salah
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: module_salah_local_tasks
+theme: module_salah
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

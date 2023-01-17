@@ -1,0 +1,22 @@
+uuid: 64517cf5-d885-409f-8a28-c3bdac361dc3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - module_salah
+_core:
+  default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
+id: module_salah_breadcrumbs
+theme: module_salah
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
