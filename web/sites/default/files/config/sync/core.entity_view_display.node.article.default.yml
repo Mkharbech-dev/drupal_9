@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.article.field_categories
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.wide
+    - image.style.medium
     - node.type.article
   module:
     - comment
@@ -52,7 +52,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: wide
+      image_style: medium
       image_loading:
         attribute: lazy
     third_party_settings: {  }

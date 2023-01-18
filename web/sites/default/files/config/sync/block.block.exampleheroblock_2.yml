@@ -1,20 +1,20 @@
-uuid: 8ee24957-9968-4566-a43e-83d276951933
+uuid: c601b575-5a51-4892-871d-fcbfe79b79da
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - module_salah
   theme:
     - formation
-id: formation_examplesalahblock
+id: exampleheroblock_2
 theme: formation
-region: sidebar_first
-weight: -6
+region: content
+weight: -2
 provider: null
 plugin: module_salah_salah
 settings:
   id: module_salah_salah
-  label: 'Example d''un  block des héro'
+  label: 'Example Héro block'
   label_display: visible
   provider: module_salah
 visibility: {  }

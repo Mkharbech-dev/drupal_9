@@ -1,6 +1,6 @@
 uuid: 5e0d26e2-82d9-4196-863b-6f3f25ff0baa
 langcode: fr
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
 id: formation_messages
 theme: formation
-region: highlighted
+region: content
 weight: 0
 provider: null
 plugin: system_messages_block
