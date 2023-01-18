@@ -5,6 +5,7 @@
  * Implementation de notre hook.
  */
 
+use Drupal\Core\Access\AccessResult;
 
 
 /**
@@ -57,5 +58,4 @@ function module_salah_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
 
   //$entity->set('title', $entity->get('title')->getValue()[0]['value'] . ' ...');
 }
-
 

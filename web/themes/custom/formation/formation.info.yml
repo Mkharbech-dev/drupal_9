@@ -10,8 +10,8 @@ screenshot: screenshot.png
 regions:
   header: "Entete"
   content: "Région de contenu"
-  sidebar: "Barre de gauche"
   primary_menu: "Menu principale"
   secondary_menu: "Menu secondaire"
   sidebar_first: "Première barre latérale"
+  sidebar_second: "Deuxièmme barre latérale"
   footer: "Pied de page"
