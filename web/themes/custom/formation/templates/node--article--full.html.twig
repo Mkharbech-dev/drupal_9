@@ -82,7 +82,7 @@
   {# pour debuguer une variable en twig:
   {{ dump(node) }} ou {{ kint(node) }}
   #}
-<article{{ attributes.addClass(classes) }}>
+<article style="background: black" {{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
       {% if label and not page %}
@@ -94,14 +94,16 @@
     {% if display_submitted %}
       <div class="node__meta">
         {{ author_picture }}
-        <span{{ author_attributes }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        <span style="color: darkgray" {{ author_attributes }}>
+          {#{% trans %}Submitted by  {{ author_name }} on {{ date }}{% endtrans %}#}
+          <h3 style="color: yellow">Soumis par{{ author_name }} à {{ date }}</h3>
         </span>
         {{ metadata }}
       </div>
     {% endif %}
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    <span style="color: coral">{{ content }}</span>
+    <span style="color: darkgray">{{ content.field_image }}</span>
+    <span style="color: darkgray">{{ content.body }}</span>
   </div>
 </article>
