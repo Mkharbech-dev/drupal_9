@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_categories
     - field.field.node.article.field_image
-    - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
@@ -45,10 +44,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_categories:
-    type: options_buttons
+    type: entity_reference_autocomplete
     weight: 121
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_image:
     type: image_image
@@ -57,16 +60,6 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

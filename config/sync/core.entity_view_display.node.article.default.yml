@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_categories
     - field.field.node.article.field_image
-    - field.field.node.article.field_tags
     - image.style.medium
     - node.type.article
   module:
@@ -28,7 +27,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   comment:
     type: comment_default
@@ -37,7 +36,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 110
+    weight: 5
     region: content
   field_categories:
     type: entity_reference_label
@@ -45,7 +44,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 111
+    weight: 6
     region: content
   field_image:
     type: image
@@ -56,20 +55,12 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: -1
-    region: content
-  field_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
 hidden:
   langcode: true

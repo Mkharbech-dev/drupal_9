@@ -1,4 +1,4 @@
-uuid: a5817ae5-5f61-4aaa-857e-7e4e1a55569d
+uuid: 0bb325f8-4054-4167-810e-a1f3cc6d8dfd
 langcode: fr
 status: true
 dependencies:
@@ -6,14 +6,12 @@ dependencies:
     - field.storage.node.field_categories
     - node.type.article
     - taxonomy.vocabulary.categories
-    - taxonomy.vocabulary.tags
-    - taxonomy.vocabulary.thematiques
 id: node.article.field_categories
 field_name: field_categories
 entity_type: node
 bundle: article
 label: Catégories
-description: 'renseignez la catégorie de ce type de contenu'
+description: ''
 required: true
 translatable: false
 default_value: {  }
@@ -23,11 +21,9 @@ settings:
   handler_settings:
     target_bundles:
       categories: categories
-      thematiques: thematiques
-      tags: tags
     sort:
       field: name
       direction: asc
-    auto_create: true
-    auto_create_bundle: categories
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

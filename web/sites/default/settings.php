@@ -825,7 +825,7 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 
-$settings['config_sync_directory'] = 'sites/default/files/config/sync';
+$settings['config_sync_directory'] = '../config/sync';
 
 
 $config['config_split.config_split.dev']['status'] = TRUE;
