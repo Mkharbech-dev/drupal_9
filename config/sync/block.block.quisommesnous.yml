@@ -1,0 +1,30 @@
+uuid: 414cac02-419d-44fc-9066-41f9dfc6e0ff
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bbc09a5c-c3c6-42f5-b7aa-5b1c5db81769'
+  module:
+    - block_content
+    - system
+  theme:
+    - formation
+id: quisommesnous
+theme: formation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:bbc09a5c-c3c6-42f5-b7aa-5b1c5db81769'
+settings:
+  id: 'block_content:bbc09a5c-c3c6-42f5-b7aa-5b1c5db81769'
+  label: 'Qui sommes-nous?'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /a-propos

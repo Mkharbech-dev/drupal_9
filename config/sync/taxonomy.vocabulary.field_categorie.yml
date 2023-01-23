@@ -1,0 +1,8 @@
+uuid: 3ba4f5b3-ad73-4cc3-a44e-887c22266079
+langcode: fr
+status: true
+dependencies: {  }
+name: Catégorie
+vid: field_categorie
+description: 'catégorie de notre article'
+weight: 0

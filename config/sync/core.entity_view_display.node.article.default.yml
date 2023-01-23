@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_categories
+    - field.field.node.article.field_categorie
     - field.field.node.article.field_image
     - image.style.medium
     - node.type.article
@@ -27,7 +27,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   comment:
     type: comment_default
@@ -38,13 +38,13 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-  field_categories:
+  field_categorie:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 6
+    weight: 0
     region: content
   field_image:
     type: image
@@ -55,7 +55,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   links:
     settings: {  }

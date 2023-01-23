@@ -43,7 +43,7 @@ class ColorTest extends MigrateSqlSourceTestBase {
       ],
       [
         'name' => 'color_bartik_logo',
-        'value' => 'public://color/bartik-e0e23ad7/screenshot.png',
+        'value' => 'public://color/bartik-e0e23ad7/logo.png',
       ],
       [
         'name' => 'color_bartik_stylesheets',
@@ -52,7 +52,7 @@ class ColorTest extends MigrateSqlSourceTestBase {
       [
         'name' => 'color_bartik_files',
         'value' => [
-          'public://color/bartik-e0e23ad7/screenshot.png',
+          'public://color/bartik-e0e23ad7/logo.png',
           'public://color/bartik-e0e23ad7/colors.css',
         ],
       ],
@@ -102,7 +102,7 @@ class ColorTest extends MigrateSqlSourceTestBase {
       ],
       [
         'name' => 'color_bartik_logo',
-        'value' => 'public://color/bartik-e0e23ad7/screenshot.png',
+        'value' => 'public://color/bartik-e0e23ad7/logo.png',
       ],
       [
         'name' => 'color_bartik_stylesheets',
@@ -111,7 +111,7 @@ class ColorTest extends MigrateSqlSourceTestBase {
       [
         'name' => 'color_bartik_files',
         'value' => [
-          'public://color/bartik-e0e23ad7/screenshot.png',
+          'public://color/bartik-e0e23ad7/logo.png',
           'public://color/bartik-e0e23ad7/colors.css',
         ],
       ],

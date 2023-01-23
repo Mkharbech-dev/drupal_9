@@ -19,7 +19,7 @@ services:
 
   # Drupal with xdebug
   drupal:
-    image: abbes/drupal9
+    image: salah/drupal9
     container_name: "${PROJECT_NAME}_drupal"
     build:
       context: ./docker/

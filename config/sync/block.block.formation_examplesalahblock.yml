@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - module_salah
+    - system
   theme:
     - formation
 id: formation_examplesalahblock
@@ -17,4 +18,8 @@ settings:
   label: 'Example d''un  block des héro'
   label_display: visible
   provider: module_salah
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
